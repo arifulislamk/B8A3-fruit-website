@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- lato font family link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- customes colors class add with tailwind  -->
     <script>
@@ -27,12 +31,17 @@
             }
         }
     </script>
+    <style>
+        .font-lato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
+<body class="font-lato">
+    <header class="container mx-auto mx-28">
         <nav>
-            <div class="navbar bg-base-100">
+            <div class="navbar px-12 h-[120px] rounded-full bg-[#F85559]">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -55,20 +64,22 @@
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <ul class="list-none lg:flex gap-7">
+                    <ul class="list-none lg:flex gap-7 text-white font-medium text-xl">
                         <li><a>Home</a></li>
                         <li><a>Abouts Us</a></li>
                         <li><a>Shop</a></li>
                         <li><a>All Fruits</a></li>
                     </ul>
                 </div>
-                <div class="navbar-center hidden lg:flex justify-center">
+                <div class="navbar-center gap-4 hidden lg:flex justify-center">
                     <img src="./images/logo.png" alt="">
-                    <p>Fruit Burst</p>
+                    <p class="font-extrabold text-4xl text-white">Fruit Burst</p>
                 </div>
                 <div class="navbar-end">
-                    <input class="bor" type="text">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="p-4 w-[400px] h-[56px] flex justify-between items-center bg-white rounded-full">
+                        <input class="bor pl-8" placeholder="Search here" type="text">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
             </div>
         </nav>
